@@ -1,5 +1,5 @@
 # PixaBay-Android
-An Android app to search and display images using__[Pixabay API](https://pixabay.com/api/docs/)__.
+An Android app to search and display images using [Pixabay API](https://pixabay.com/api/docs/).
 
 # Demo
 ![PixaBay-Android](screenshots/pixabay_android_demo.gif)
@@ -26,7 +26,7 @@ the demo_apk folder.
 
 ## Build it
 
-You can [build and run] the(https://developer.android.com/studio/run) project using the Android
+You can [build and run](https://developer.android.com/studio/run) the project using the Android
 Studio/Gradle. You need an android [emulator](https://developer.android.com/studio/run/emulator)
 or a [real device](https://developer.android.com/studio/run/device) to test the build.
 
