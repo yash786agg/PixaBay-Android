@@ -21,8 +21,8 @@ An Android app to search and display images using [Pixabay API](https://pixabay.
 Clone the repository and import the project in Android Studio.You will also need to provide a key to
 access the [Pixabay API](https://pixabay.com/api/docs/), after getting the key, just put it in the
 [keys.properties](https://github.com/yash786agg/PixaBay-Android/blob/master/keys.properties) file
-in the place of **YOUR_API_KEY_HERE**.You can also try the demo app pixabay_android.apk available in
-the demo_apk folder.
+in the place of **YOUR_API_KEY_HERE**.You can also try the demo app [pixabay_android.apk](https://github.com/yash786agg/PixaBay-Android/tree/master/demo_apk)
+available in the demo_apk folder.
 
 ## Build it
 
