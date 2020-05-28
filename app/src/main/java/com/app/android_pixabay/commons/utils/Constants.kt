@@ -6,7 +6,7 @@ class Constants {
 
         const val TIMEOUT_REQUEST : Long = 30
 
-        const val PER_PAGE : Int = 20
+        const val PER_PAGE : Int = 15
 
         const val FRUITS_QUERY_TAG: String = "fruits"
 

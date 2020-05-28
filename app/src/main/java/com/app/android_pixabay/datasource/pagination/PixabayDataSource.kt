@@ -1,12 +1,15 @@
 package com.app.android_pixabay.datasource.pagination
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.PageKeyedDataSource
+import com.app.android_pixabay.commons.utils.Constants
 import com.app.android_pixabay.datasource.api.NetworkState
 import com.app.android_pixabay.domain.entities.HitsList
 import com.app.android_pixabay.domain.repository.PixabayRepository
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 
@@ -32,6 +35,8 @@ class PixabayDataSource(private val pixabayRepository: PixabayRepository, privat
                 val response = pixabayRepository.fetchPixabayData(query,page)
                 response.let {
                     if(response.isSuccessful) {
+                        Log.e("PixabayListVM","PER_PAGE: ${Constants.PER_PAGE}")
+                        Log.e("PixabayListVM","Hits size: ${response.body()?.hits?.size}")
                         response.body()?.hits?.let { data -> callback(data) }
                         networkState.postValue(NetworkState.Success())
                     }
