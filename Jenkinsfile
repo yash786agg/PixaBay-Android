@@ -5,46 +5,22 @@ agent {
   }
 
   stages {
-    stage('Compile') {
+    stage('Clean') {
        steps {
-          // Compile the app and its dependencies
-             sh './gradlew compileDebugSources'
+             sh 'clean'
        }
     }
 
-    stage('Unit test') {
+    stage('Debug') {
       steps {
-          // Compile and run the unit tests for the app and its dependencies
-              sh './gradlew testDebugUnitTest testDebugUnitTest'
-
-          // Analyse the test results and update the build result as appropriate
-              junit '**/TEST-*.xml'
+              sh 'assembleDebug'
       }
     }
 
-    stage('Build APK') {
+    stage('Unit Test') {
        steps {
-          // Finish building and packaging the APK
-              sh './gradlew assembleDebug'
-
-          // Archive the APKs so that they can be downloaded from Jenkins
-              archiveArtifacts '**/*.apk'
+              sh 'testDebugUnitTest'
        }
-    }
-
-    stage('Static analysis') {
-        steps {
-           // Run Lint and analyse the results
-               sh './gradlew lintDebug'
-               androidLint pattern: '**/lint-results-*.xml'
-        }
     }
   }
-
-  post {
-      failure {
-        // Notify developer team of the failure
-        mail to: 'yash.agarwalL@digia.com', subject: 'Oops!', body: "Build ${env.BUILD_NUMBER} failed; ${env.BUILD_URL}"
-      }
-    }
 }
