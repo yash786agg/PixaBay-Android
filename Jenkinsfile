@@ -36,13 +36,6 @@ agent {
           // Archive the APKs so that they can be downloaded from Jenkins
             archiveArtifacts '**/*.apk'
       }
-
-      post {
-        success {
-          // Notify if the upload succeeded
-          mail to: 'yash.agarwal@digia.com', subject: 'New build available!', body: 'Check it out!'
-        }
-      }
     }
 
     stage('Static analysis') {
