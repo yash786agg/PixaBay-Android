@@ -1,22 +1,25 @@
 pipeline {
-agent any
+agent {
+    // Run on a build agent where we have the Android SDK installed
+    label 'master'
+  }
 
   stages {
     stage('Clean') {
        steps {
-             sh 'clean'
+             sh './gradlew clean'
        }
     }
 
     stage('Debug') {
       steps {
-              sh 'assembleDebug'
+              sh './gradlew assembleDebug'
       }
     }
 
     stage('Unit Test') {
        steps {
-              sh 'testDebugUnitTest'
+              sh './gradlew testDebugUnitTest'
        }
     }
   }
