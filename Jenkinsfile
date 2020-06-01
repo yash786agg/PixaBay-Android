@@ -18,6 +18,13 @@ agent {
            }
         }
 
+    stage('Detekt Lint Analysis') {
+               steps {
+                  // static analysis using Detekt lint
+                     sh './gradlew detekt'
+               }
+            }
+
     stage('Unit Test') {
            steps {
                // Compile and run the unit tests for the app and its dependencies

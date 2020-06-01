@@ -9,7 +9,7 @@
 
         <variable
             name="hitsList"
-            type="com.app.android_pixabay.domain.entities.HitsList"/>
+            type="com.app.androidPixabay.domain.entities.HitsList"/>
     </data>
 
     <androidx.cardview.widget.CardView

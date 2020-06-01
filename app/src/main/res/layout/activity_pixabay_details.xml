@@ -10,11 +10,11 @@
 
         <variable
             name="hitsList"
-            type="com.app.android_pixabay.domain.entities.HitsList"/>
+            type="com.app.androidPixabay.domain.entities.HitsList"/>
 
         <variable
             name="callback"
-            type="com.app.android_pixabay.ui.pixabay.details.PixaBayDetailsActivity"/>
+            type="com.app.androidPixabay.ui.pixabay.details.PixaBayDetailsActivity"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.pixabay.list.PixabayListActivity">
 
-    <com.app.android_pixabay.commons.extensions.SearchView
+    <com.app.androidPixabay.commons.extensions.SearchView
         android:id="@+id/searchView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

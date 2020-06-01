@@ -5,7 +5,7 @@
     <data>
         <variable
             name="callback"
-            type="com.app.android_pixabay.ui.pixabay.details.PixaBayDetailsActivity"/>
+            type="com.app.androidPixabay.ui.pixabay.details.PixaBayDetailsActivity"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
